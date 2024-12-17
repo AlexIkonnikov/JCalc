@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         EditText editText = findViewById(R.id.display);
         editText.requestFocus();
-        editText.setOnTouchListener(new View.OnTouchListener() {
+        editText.setOnTouchListener(new EditText.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 return true;
@@ -47,8 +47,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void handleCommaClick(EditText editText) {
-        Editable editable = editText.getText();
-        editText.append(".");
+        //TODO: implement
+//        Editable editable = editText.getText();
+//        editText.append(".");
     }
 
     private void setOnResetListener(EditText editText) {
@@ -56,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
             Editable text = editText.getText();
             if (text.length() > 0 ) {
                 text.delete(0, text.length());;
-                editText.setSelection(0);
             }
             return false;
         });
@@ -65,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
             Editable text = editText.getText();
             if (text.length() > 0 ) {
                 text.delete(text.length() - 1, text.length());;
-                editText.setSelection(0);
             }
         });
     }
@@ -98,7 +97,16 @@ public class MainActivity extends AppCompatActivity {
             String expression = text.toString();
             Expression exp = new Expression(expression);
             Double res = exp.calculate();
-            String result = res - res.intValue() == 0 ? Integer.toString(res.intValue()) : res.toString();
+
+            String result = "";
+
+            if (res - res.intValue() == 0) {
+                result = Integer.toString(res.intValue());
+            } else {
+                Integer count = Math.min(res.toString().length(), 7);
+                result = res.toString().substring(0, count);
+            }
+
             editText.setText(result);
             editText.setSelection(result.length());
         });

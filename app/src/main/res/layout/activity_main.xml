@@ -13,16 +13,15 @@
        >
 
         <EditText
-            android:elevation="@dimen/cardview_default_radius"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
             android:id="@+id/display"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:maxLines="1"
-            android:minLines="1"
             android:textSize="70sp"
             android:layout_marginVertical="40dp"
             android:layout_marginHorizontal="10dp"
+            android:singleLine="true"
             android:hint="0" />
 
 
@@ -31,15 +30,17 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="30dp"
             android:columnCount="4"
-            android:paddingVertical="50dp"
+            android:useDefaultMargins="true"
+            android:gravity="center"
             android:rowCount="4">
 
             <Button
                 android:id="@+id/division"
                 android:layout_column="3"
                 android:backgroundTint="@color/black"
+                android:textSize="25dp"
                 android:text="/" />
 
             <Button
@@ -47,7 +48,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
-                
+                android:textSize="25dp"
+                android:minHeight="20dp"
+                android:minWidth="80dp"
                 android:text="7" />
 
             <Button
@@ -56,7 +59,9 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
 
-                
+                android:textSize="25dp"
+                android:minHeight="20dp"
+                android:minWidth="80dp"
                 android:text="8" />
 
             <Button
@@ -64,6 +69,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
+                android:textSize="25dp"
+                android:minHeight="20dp"
+                android:minWidth="80dp"
                 android:text="9" />
 
             <Button
@@ -71,6 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
+                android:textSize="25dp"
                 android:text="*" />
 
 
@@ -79,7 +88,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
-                
+                android:textSize="25dp"
+                android:minHeight="20dp"
+                android:minWidth="80dp"
                 android:text="4" />
 
             <Button
@@ -87,7 +98,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
-                
+                android:textSize="25dp"
+                android:minHeight="20dp"
+                android:minWidth="80dp"
                 android:text="5" />
 
             <Button
@@ -95,7 +108,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
-                
+                android:textSize="25dp"
+                android:minHeight="20dp"
+                android:minWidth="80dp"
                 android:text="6" />
 
             <Button
@@ -103,6 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
+                android:textSize="25dp"
                 android:text="-" />
 
             <Button
@@ -110,7 +126,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
-                
+                android:textSize="25dp"
+                android:minHeight="20dp"
+                android:minWidth="80dp"
                 android:text="1" />
 
             <Button
@@ -118,7 +136,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
-                
+                android:textSize="25dp"
+                android:minHeight="20dp"
+                android:minWidth="80dp"
                 android:text="2" />
 
             <Button
@@ -126,7 +146,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
-                
+                android:textSize="25dp"
+                android:minHeight="20dp"
+                android:minWidth="80dp"
                 android:text="3" />
 
             <Button
@@ -134,6 +156,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
+                android:textSize="25dp"
+
                 android:text="+" />
 
             <Button
@@ -141,13 +165,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
-                android:text="reset" />
+                android:textSize="25dp"
+                android:minHeight="50dp"
+                android:minWidth="80dp"
+                android:text="R" />
 
             <Button
                 android:id="@+id/zero"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
+                android:textSize="25dp"
+                android:minHeight="20dp"
+                android:minWidth="80dp"
                 android:text="0" />
 
             <Button
@@ -155,7 +185,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
-                
+                android:textSize="25dp"
+                android:minHeight="50dp"
+                android:minWidth="80dp"
+                android:layout_gravity="center"
                 android:text="." />
 
             <Button
@@ -163,8 +196,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
+                android:textSize="25dp"
                 android:text="=" />
-
         </GridLayout>
     </RelativeLayout>
 
